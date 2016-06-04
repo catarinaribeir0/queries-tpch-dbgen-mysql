@@ -15,7 +15,7 @@ Make a copy of the dummy makefile
 $ cp makefile.suite makefile
 ```  
 
-In dbgen folder find the created makefile and insert highlighted values (bold) to this file.  ```
+In dbgen folder find the created makefile and insert highlighted values (bold) to this file.  
 ```
 ################
 ## CHANGE NAME OF ANSI COMPILER HERE
