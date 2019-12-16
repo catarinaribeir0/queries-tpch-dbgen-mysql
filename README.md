@@ -15,37 +15,37 @@ Make a copy of the dummy makefile
 $ cp makefile.suite makefile
 ```  
 
-In dbgen folder find the created makefile and insert highlighted values (bold) to this file.  
-```
+In dbgen folder find the created makefile and insert highlighted values (<b>bold</b>) to this file.  
+<pre>
 ################
 ## CHANGE NAME OF ANSI COMPILER HERE
 ################
-CC      = gcc
+CC      = <b>gcc</b>
 # Current values for DATABASE are: INFORMIX, DB2, TDAT (Teradata)
 #                                  SQLSERVER, SYBASE, ORACLE, VECTORWISE
 # Current values for MACHINE are:  ATT, DOS, HP, IBM, ICL, MVS, 
 #                                  SGI, SUN, U2200, VMS, LINUX, WIN32 
 # Current values for WORKLOAD are:  TPCH
-DATABASE= *QLSERVER*
-MACHINE = *LINUX*
-WORKLOAD = *TPCH*
+DATABASE= <b>SQLSERVER</b>
+MACHINE = <b>LINUX</b>
+WORKLOAD = <b>TPCH</b>
 #
 ...
-```  
+</pre>
 
 In dbgen folder find the *tpcd.h* file and edit higlighted (bold) values for SQLSERVER.  
-```
+<pre>
 ...
 #ifdef  SQLSERVER
 #define GEN_QUERY_PLAN  "set showplan on\nset noexec on\ngo\n"
-#define START_TRAN      "**BEGIN WORK;**"
-#define END_TRAN        "**COMMIT WORK;**"
+#define START_TRAN      "<b>BEGIN WORK;</b>"
+#define END_TRAN        "<b>COMMIT WORK;</b>"
 #define SET_OUTPUT      ""
 #define SET_ROWCOUNT    "limit %d;\n\n"
 #define SET_DBASE       "use %s;\n"
 #endif
 ...
-```  
+</pre>
 
 Run make command.  
 ```
